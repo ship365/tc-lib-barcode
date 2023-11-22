@@ -232,7 +232,7 @@ class Datamatrix extends \Com\Tecnick\Barcode\Type\Square
         $pos = 0; // current position
         $cdw = []; // array of codewords to be returned
         $cdw_num = 0; // number of data codewords
-        $data_length = strlen($data); // number of chars
+        $data_length = mb_strlen($data); // number of chars
         $field_length = 0; // number of chars in current field
         while ($pos < $data_length) {
             // Determine if current char is FNC1 (don't encode it, just pass it through)
